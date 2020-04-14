@@ -1,13 +1,15 @@
 import Axios from "axios"
+
 import { 
   GET_ALL_USUARIOS, 
   GET_ALL_EMPRESAS, 
   GET_USUARIO, 
   GET_EMPRESA 
 } from "./actions"
+import { servidor } from "../routes/servidor"
 
 //const API_URL = process.env.REACT_APP_API_URL
-const API_URL = "http://localhost:8000/api"
+const API_URL = servidor
 
 export const getAllUsuarios = () => dispatch => {
   Axios.get(`${API_URL}/users`)
