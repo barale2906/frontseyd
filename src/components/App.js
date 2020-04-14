@@ -2,7 +2,7 @@ import React from 'react';
 
 const App = () => (
 
-  <h1>Hola!!</h1>
+  <h1 className="text-primary">Hola!!</h1>
 
 )
 
