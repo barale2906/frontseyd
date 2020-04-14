@@ -6,7 +6,8 @@ import {
   GET_USUARIO, 
   GET_EMPRESA 
 } from "./actions"
-import { servidor } from "../routes/servidor"
+import { servidor } from "../components/routes/servidor"
+
 
 //const API_URL = process.env.REACT_APP_API_URL
 const API_URL = servidor

@@ -1,0 +1,130 @@
+body{
+    
+    background-color: rgba(49, 241, 255, 0.836);
+    
+}
+
+.formula{
+    background: rgba(0, 0, 0, .4);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.568);
+    color: white;
+}
+
+.form-control{
+    background: rgba(0,0, 0, 0.568);
+    border-style: none;
+    transition: 0.5s ease-in;
+    outline: none;
+    box-shadow: none;
+}
+
+.form-control:focus{
+    background: none;
+    
+} 
+.form-control::placeholder{
+    color: white;
+}
+
+.ingresar{
+    background: #222A3F;
+    padding: 10%;
+    font-size: 16px;
+    font-weight: 700!important;
+    color: white;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.568);
+    transition: 0.5s ease-in;
+     
+}
+
+.ingresar:hover{
+    color: white;
+}
+
+.olvide{
+    color: white;
+    text-decoration-style: none;
+    text-decoration-line: none;
+}
+.olvide:hover {
+    color: white;
+    text-decoration-style: none;
+    text-decoration-line: none;
+    cursor: pointer;
+}
+
+.olvide1{
+    color: white;
+    text-decoration-style: none;
+    text-decoration-line: none;
+    font-size: 10px;
+    font-weight: 700!important;
+    border: 2px solid white ;
+    padding: 10px;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, .5);
+
+}
+.olvide1:hover {
+    color: white;
+    text-decoration-style: none;
+    text-decoration-line: none;
+    cursor: pointer;
+}
+
+.card404{
+    width: 18rem;
+}
+.cardbody404{
+    background: rgba(2, 69, 95, 0.616);
+}
+
+.formula404{
+    background: rgba(118, 196, 216, 0.932);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(39, 106, 194, 0.719);
+    color: white;
+}
+
+/* CONFIGURACIÓN PARA EL MENÚ LATERAL */
+
+.sidenav {
+    display: none;
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    padding-top: 60px;
+  }
+  
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+  }
+  
+  .sidenav a:hover {
+    color: #f1f1f1;
+  }
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
