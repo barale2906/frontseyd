@@ -6,11 +6,14 @@ import { servidor } from '../routes/servidor'
 import Axios from 'axios'
 
 const cerrarSesion = () =>{
-  Axios.get(`${servidor}/logout`)
+  Axios.get(`${servidor}/logout`, {
+    headers: { 'Authorization': 'Bearer ' + sessionStorage.getItem('csab') }
+  })
   .then(r =>{
 
       
       sessionStorage.removeItem('csab')
+
       window.location="/login"
 
   })
@@ -22,8 +25,8 @@ const Header = ({home}) => {
   if(home){
     return(
       <>
-              <div class="jumbotron jumbotron-fluid alert-info">
-                  <div class="container text-center">
+              <div className="jumbotron jumbotron-fluid alert-info">
+                  <div className="container text-center">
                       <h1>Bienvenido(a) XXXX a nuestra plataforma</h1>
                       <p>Por favor seleccione el modulo que requiera.</p>
                   </div>
@@ -47,7 +50,7 @@ const Header = ({home}) => {
             
             
                 
-                    <nav class="navbar navbar-expand-lg navbar-light bg-info">
+                    <nav className="navbar navbar-expand-lg navbar-light bg-info">
                     <NavLink className="navbar-brand" to="/">
                         <img
                             src={logoenc}
@@ -57,21 +60,21 @@ const Header = ({home}) => {
                         />
                     </NavLink> 
                     
-                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                            <span class="navbar-toggler-icon"></span>
+                        <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                            <span className="navbar-toggler-icon"></span>
                         </button>
 
-                        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                            <ul class="navbar-nav mr-auto">
+                        <div className="collapse navbar-collapse" id="navbarSupportedContent">
+                            <ul className="navbar-nav mr-auto">
                             
-                            <li class="nav-item dropdown">
-                                <NavLink class="nav-link dropdown-toggle" id="navbardrop" data-toggle="dropdown" to="/" >
-                                    <span class="navbar-toggler-icon"></span>
+                            <li className="nav-item dropdown">
+                                <NavLink className="nav-link dropdown-toggle" id="navbardrop" data-toggle="dropdown" to="/" >
+                                    <span className="navbar-toggler-icon"></span>
                                 </NavLink>
                                 
                                 
 
-                                <div class="dropdown-menu">
+                                <div className="dropdown-menu">
 
                                     
                                     
@@ -81,8 +84,8 @@ const Header = ({home}) => {
                             
                             </ul>
                             <ul className="navbar-nav ">
-                                <li class="nav-item dropdown">
-                                    <NavLink to="/" class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <li className="nav-item dropdown">
+                                    <NavLink to="/" className="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     <img   
                                         src={imausu} 
                                         className="rounded-circle" 
@@ -90,7 +93,7 @@ const Header = ({home}) => {
                                     /> CUENTA
                                     </NavLink>
                                     
-                                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                                    <div className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                                         
                                     <NavLink className="dropdown-item" to="/">Notificaciones</NavLink>
                                     <NavLink className="dropdown-item" to="/">Mi Cuenta</NavLink>
