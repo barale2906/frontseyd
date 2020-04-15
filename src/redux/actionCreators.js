@@ -4,7 +4,9 @@ import {
   GET_ALL_USUARIOS, 
   GET_ALL_EMPRESAS, 
   GET_USUARIO, 
-  GET_EMPRESA 
+  GET_EMPRESA, 
+  GET_ALL_MODULOS,
+  GET_MODULO
 } from "./actions"
 import { servidor } from "../components/routes/servidor"
 
@@ -45,14 +47,34 @@ export const getAllEmpresas = () => dispatch => {
   )
 }
 
-
-
 export const getEmpresa = id => dispatch => {
   Axios.get(`${API_URL}/empresas/${id}`)
   .then(resp=> {
       return dispatch({
         type: GET_EMPRESA,
         empresa: resp.data
+      })
+    }
+  )
+}
+
+export const getAllModulos = () => dispatch => {
+  Axios.get(`${API_URL}/modulos`)
+  .then(resp=> {
+      return dispatch({
+        type: GET_ALL_MODULOS,
+        modulos: resp.data
+      })
+    }
+  )
+}
+
+export const getModulo = id => dispatch => {
+  Axios.get(`${API_URL}/modulos/${id}`)
+  .then(resp=> {
+      return dispatch({
+        type: GET_MODULO,
+        modulo: resp.data
       })
     }
   )

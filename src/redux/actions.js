@@ -1,6 +1,9 @@
 export const GET_ALL_USUARIOS = "GET_ALL_USUARIOS"
-export const GET_ALL_EMPRESAS = "GET_ALL_EMPRESAS"
-
 export const GET_USUARIO = "GET_USUARIO"
+
+export const GET_ALL_EMPRESAS = "GET_ALL_EMPRESAS"
 export const GET_EMPRESA = "GET_EMPRESA"
+
+export const GET_ALL_MODULOS = "GET_ALL_MODULOS"
+export const GET_MODULO = "GET_MODULO"
 

@@ -1,4 +1,4 @@
-import { GET_ALL_USUARIOS, GET_USUARIO, GET_ALL_EMPRESAS, GET_EMPRESA } from "./actions"
+import { GET_ALL_USUARIOS, GET_USUARIO, GET_ALL_EMPRESAS, GET_EMPRESA, GET_ALL_MODULOS, GET_MODULO } from "./actions"
 
 export const usuarioReducer = (state = {}, action) => {
   if(action.type === GET_ALL_USUARIOS){
@@ -32,6 +32,26 @@ export const empresaReducer = (state = {}, action) => {
     return{
       ...state,
       empresa: action.empresa
+    }
+  }
+  
+  return state
+}
+
+export const moduloReducer = (state = {}, action) => {
+  if(action.type === GET_ALL_MODULOS){
+
+    return{
+      ...state,
+      modulos: action.modulos
+    }
+
+  }
+
+  if(action.type === GET_MODULO){
+    return{
+      ...state,
+      modulo: action.modulo
     }
   }
   
