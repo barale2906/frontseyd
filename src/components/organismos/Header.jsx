@@ -9,15 +9,9 @@ const cerrarSesion = () =>{
   Axios.get(`${servidor}/logout`, {
     headers: { 'Authorization': 'Bearer ' + sessionStorage.getItem('csab') }
   })
-  .then(r =>{
 
-      
-      sessionStorage.removeItem('csab')
-
-      window.location="/login"
-
-  })
-  .catch(e=>console.log(e))
+  sessionStorage.removeItem('csab')
+  alert("La sesión se ha cerrado correctamente")
 }
 
 const Header = ({home}) => {
